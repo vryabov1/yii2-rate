@@ -1,0 +1,21 @@
+{
+    "name": "qvalent/yii2-rate",
+    "description": "Yii2 rate",
+    "type": "yii2-extension",
+    "keywords": ["yii2","extension"],
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "qvalent",
+            "email": "valentin531@yandex.ru"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "qvalent\\rate\\": ""
+        }
+    }
+}
