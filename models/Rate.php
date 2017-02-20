@@ -77,11 +77,18 @@ class Rate extends \yii\db\ActiveRecord
     public static function findOrCreate($itemType, $itemId, $userId)
     {
         $params = [
-            'itemType' => $itemType,
-            'itemId' => $itemId,
-            'userId' => $userId ?: Yii::$app->user->id
+            'item_type' => $itemType,
+            'item_id' => $itemId,
+            'user_id' => $userId ?: Yii::$app->user->id
         ];
 
-        return self::findOne($params) ?: Yii::createObject(get_called_class(), $params);
+        $exists = self::findOne($params);
+
+        if ($exists) return $exists;
+
+        /** @var self $new */
+        $new = Yii::createObject(get_called_class());
+        $new->setAttributes($params);
+        return $new;
     }
 }
