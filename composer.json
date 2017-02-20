@@ -17,5 +17,8 @@
         "psr-4": {
             "qvalent\\rate\\": ""
         }
+    },
+    "extra": {
+        "bootstrap": "qvalent\\rate\\Bootstrap"
     }
 }

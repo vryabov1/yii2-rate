@@ -4,8 +4,9 @@ namespace qvalent\rate\components;
 
 use qvalent\rate\models\Rate;
 use Yii;
+use yii\base\Object;
 
-class RateCheckout
+class RateCheckout extends Object
 {
     /** @var Rate  */
     private $rateModel;
@@ -23,6 +24,7 @@ class RateCheckout
             $itemId,
             $userId ?: Yii::$app->user->id
         );
+        parent::__construct();
     }
 
     /**
