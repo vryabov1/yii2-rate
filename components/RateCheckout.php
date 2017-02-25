@@ -6,6 +6,10 @@ use qvalent\rate\models\Rate;
 use Yii;
 use yii\base\Object;
 
+/**
+ * Class RateCheckout
+ * @package qvalent\rate\components
+ */
 class RateCheckout extends Object
 {
     /** @var Rate  */
